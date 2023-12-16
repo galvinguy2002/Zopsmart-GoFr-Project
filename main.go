@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	_ "github.com/mattn/go-sqlite3"
+	"gofr.dev/pkg/gofr"
 )
 
 var db *sql.DB
@@ -67,4 +68,18 @@ func updateStock(id int, stock Stock) error {
 }
 func main() {
 
+	app := gofr.New()
+	createStockDatabase()
+
+	app.GET("/", func(ctx *gofr.Context) (interface{}, error) {
+		return "Hello! This is the Stocks Management API", nil
+	})
+
+	app.GET("/view", func(ctx *gofr.Context) (interface{}, error) {
+		stocks, err := viewStocks()
+		if err != nil {
+			fmt.Println("Couldn't view stocks")
+		}
+		return stocks, nil
+	})
 }
