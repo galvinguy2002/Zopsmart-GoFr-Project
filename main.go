@@ -2,7 +2,9 @@ package main
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
+	"strconv"
 
 	_ "github.com/mattn/go-sqlite3"
 	"gofr.dev/pkg/gofr"
@@ -82,4 +84,43 @@ func main() {
 		}
 		return stocks, nil
 	})
+
+	app.GET("/d/:id", func(ctx *gofr.Context) (interface{}, error) {
+		idParam := ctx.Param("id")
+		if idParam == "" {
+			return nil, fmt.Errorf("ID not provided")
+		}
+
+		id, err := strconv.Atoi(idParam)
+		if err != nil {
+			return nil, fmt.Errorf("invalid format")
+		}
+
+		deletedStock, err := viewStocks()
+		if err != nil {
+			return nil, err
+		}
+
+		err = deleteStock(id)
+		if err != nil {
+			fmt.Println("Couldn't delete stock:", err)
+			return nil, err
+		}
+
+		return deletedStock, nil
+	})
+
+	app.PUT("/add", func(ctx *gofr.Context) (interface{}, error) {
+		var stock Stock
+		if err := json.NewDecoder(ctx.Request().Body).Decode(&stock); err != nil {
+			return nil, err
+		}
+		err := addStock(stock)
+		if err != nil {
+			return nil, err
+		}
+		return stock, nil
+	})
+
+	app.Start()
 }
