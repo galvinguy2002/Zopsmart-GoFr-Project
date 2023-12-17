@@ -110,7 +110,7 @@ func main() {
 		return deletedStock, nil
 	})
 
-	app.PUT("/add", func(ctx *gofr.Context) (interface{}, error) {
+	app.POST("/add", func(ctx *gofr.Context) (interface{}, error) {
 		var stock Stock
 		if err := json.NewDecoder(ctx.Request().Body).Decode(&stock); err != nil {
 			return nil, err
@@ -120,6 +120,31 @@ func main() {
 			return nil, err
 		}
 		return stock, nil
+	})
+
+	app.PUT("/update/:id", func(ctx *gofr.Context) (interface{}, error) {
+		idParam := ctx.Param("id")
+		if idParam == "" {
+			return nil, fmt.Errorf("ID not provided")
+		}
+
+		id, err := strconv.Atoi(idParam)
+		if err != nil {
+			return nil, fmt.Errorf("invalid format")
+		}
+
+		var updatedStock Stock
+		if err := json.NewDecoder(ctx.Request().Body).Decode(&updatedStock); err != nil {
+			return nil, err
+		}
+
+		err = updateStock(id, updatedStock)
+		if err != nil {
+			fmt.Println("Couldn't update stock:", err)
+			return nil, err
+		}
+
+		return updatedStock, nil
 	})
 
 	app.Start()
