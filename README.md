@@ -1,17 +1,20 @@
 # Zopsmart GoFr Project
- A simple GoFr mini project built by a Go getter ![1_dX7_Le4fztcY0QGbuk6KWA](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/assets/119154626/8f2ec3d7-e5b2-4bfd-a119-ea370324247a)
+ A Simple GoFr Mini Project built by a Go Getter !! ![1_dX7_Le4fztcY0QGbuk6KWA](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/assets/119154626/8f2ec3d7-e5b2-4bfd-a119-ea370324247a)
 
 
- ## Net Requirements
+ ## Net Requirements:
 Build a simple HTTP (REST) API using GoFr--
 ### 1. CRUD Operations: Build APIs for create, read, update and delete operations for all entities
   - [x] Create :white_check_mark:
-  - [x] Create/Read :white_check_mark:
+        
+  - [x] Read :white_check_mark:
+        
   - [x] Update/Delete :white_check_mark:
   
 
 ### 2. DB Integration: The API should have integration with database for persistence of data. Any SQL or NoSQL DB, which has a freely available docker image, may be used
   - [x] Database Creation :white_check_mark:
+        
   - [x] Integration using Gofr :white_check_mark:
   
 
@@ -19,18 +22,55 @@ Build a simple HTTP (REST) API using GoFr--
 - [x] All CRUD op represent approximate unit test coverage :white_check_mark:
 
 - [x] Try to incorporate a real-world scenario while implementing the project. :white_check_mark:
-    - [x] The real world scenario involves Stock Management API where user can retrieve details in relation with STOCKS. 
+      
+    - [x] The real world scenario involves Stock Management API where user can retrieve details in relation with STOCKS. :white_check_mark:
 ## Extra Points
 
 - [ ] Unit Test Coverage > 90%
-- [ ] Postman collection for trying out the APIs
-- [x] Sequence diagrams, UML diagrams<br> :white_check_mark: <br>
+      
+- [x] Postman collection for trying out the APIs(partially done) :heavy_exclamation_mark::heavy_check_mark:
+      
+- [x] Sequence diagrams, UML diagrams :white_check_mark:
+
+- [x] Subtle Front-End components provided for easy understanding :white_check_mark:
+ <br>
 [[ The following sequence diagram represents the outline of the API as complexity of the entire application and the interactions with the gofr package and the database is not possible here. ]] <br>
-      ![image](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/assets/119154626/31fb4d7e-65c3-4b2e-acab-51cd083ce0e9) <br>
-Additional UML Diagram for visual understanding : <br>
-![image](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/assets/119154626/5ca42221-4666-4a19-bf34-7667c2949ab5)
+![image](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/assets/119154626/d8b3b10f-c186-4919-92ea-17b83fb40f9e)
+
+ <br>
+--> Additional UML Diagram for visual understanding : <br>
+![image](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/assets/119154626/d1305935-184f-4ab6-a4c7-852f220e1cfb)
+
+### How to Run the Stock API:
+
+**Prerequisites:**
+- Ensure you have Go installed on your system. If not, you can download and install it.
+FOLLOW IN ORDER
+1. **Clone the Repo**
+   - Clone the repository containing the Go code for the Movie Management API.
+
+2. **Install Dependencies:**
+   - If your project has any external dependencies, use the following command to install them.
+   ```bash
+   go get ./...
+   -->gofr
+   -->npm packages (if req)
+   -->go mod tidy/go mod init for tracking
+   ```
+   
+3. **Build and Run:**
+   - Build and run the `main.go` file.
+  go run main.go
+   ```
+   
+   This will start the API server, and it will be accessible at `http://localhost:8000`.
 
 
+6. **Testing with Postman:**
+   - Install [Postman](https://www.postman.com/) to test the API endpoints.
+   - Use Postman to send HTTP requests to the API at `http://localhost:8000/stock` for testing CRUD operations.
+
+## 🎉 Thanks
 
 Built with : <br>
 Golang & GoFr <br>
@@ -39,4 +79,5 @@ HAPPY CODING :) <br>
 WITH REGARDS TO THE ZOPSMART TEAM <br>
 Harshvardhan Saxena <br>
 20104064 <br>
+harshsaxena5434@gmail.com <br>
 Jaypee Institute of Information Technology(JIIT), Noida
