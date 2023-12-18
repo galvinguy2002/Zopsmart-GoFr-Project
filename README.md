@@ -70,6 +70,35 @@ FOLLOW IN ORDER
    - Install [Postman](https://www.postman.com/) to test the API endpoints.
    - Use Postman to send HTTP requests to the API at `http://localhost:8000/stock` for testing CRUD operations.
 
+----------------------------------------------------------------------------------------------------------------------------------------------
+### Prerequisites For FrontEnd
+Make sure you have the following installed on your machine:
+- Node.js & npm - [Download & Install Node.js](https://nodejs.org/)
+- Git - [Download & Install Git](https://git-scm.com/)
+### Installation
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/galvinguy2002/Zopsmart-GoFr-Project
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd stocks-management-app
+    ```
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+### Running the Application
+To stat the React development server, use the following command:
+
+```bash
+npm start
+ ```
+
 ## 🎉 Thanks
 
 Built with : <br>
