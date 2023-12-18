@@ -35,11 +35,11 @@ Build a simple HTTP (REST) API using GoFr--
 - [x] Subtle Front-End components provided for easy understanding :white_check_mark:
  <br>
 [[ The following sequence diagram represents the outline of the API as complexity of the entire application and the interactions with the gofr package and the database is not possible here. ]] <br>
-![image](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/assets/119154626/d8b3b10f-c186-4919-92ea-17b83fb40f9e)
+![SEQ diag](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/blob/main/img/seq.png)
 
  <br>
 --> Additional UML Diagram for visual understanding : <br>
-![image](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/assets/119154626/d1305935-184f-4ab6-a4c7-852f220e1cfb)
+![UML diag](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/blob/main/img/UML.png)
 
 ### How to Run the Stock API:
 
