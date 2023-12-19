@@ -1,9 +1,9 @@
 # Zopsmart GoFr Project
- A Simple GoFr Mini Project built by a Go Getter !! ![1_dX7_Le4fztcY0QGbuk6KWA](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/assets/119154626/8f2ec3d7-e5b2-4bfd-a119-ea370324247a)
+ A Simple GoFr Mini Project built by a Go Getter (Stocks Management API) !! ![1_dX7_Le4fztcY0QGbuk6KWA](https://github.com/galvinguy2002/Zopsmart-GoFr-Project/assets/119154626/8f2ec3d7-e5b2-4bfd-a119-ea370324247a)
 
 
  ## Net Requirements:
-Build a simple HTTP (REST) API using GoFr--
+Build a simple HTTP (REST) API using GoFr-- (Stocks API)
 ### 1. CRUD Operations: Build APIs for create, read, update and delete operations for all entities
   - [x] Create :white_check_mark:
         
